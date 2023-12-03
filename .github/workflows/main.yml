@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main  # ou substitua pela branch que você deseja usar
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install poetry
+        poetry install
+
+    - name: Run tests
+      run: poetry run pytest
+
+    - name: Lint documentation
+      run: poetry run sphinx-build -b html docs _build/html
+
+    - name: Deploy to PyPI
+      if: github.ref == 'refs/heads/main'  # ou substitua pela branch desejada
+      run: |
+        poetry build
+        poetry publish --username __token__ --password ${{ secrets.GITHUB_TOKEN }}
