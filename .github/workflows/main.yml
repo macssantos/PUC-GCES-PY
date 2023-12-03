@@ -25,6 +25,7 @@ jobs:
         poetry install
 
     - name: Run tests
+      poetry add --dev pytest
       run: poetry run pytest
 
     - name: Lint documentation

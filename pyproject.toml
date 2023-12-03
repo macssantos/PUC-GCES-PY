@@ -7,3 +7,6 @@ authors = ["Maria Aryene <macsantos@sga.pucminas.br>"]
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+pytest = "<7.4.3"
