@@ -13,4 +13,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.dev-dependencies]
 # Aqui você adiciona o pytest como uma dependência de desenvolvedor.
-pytest = "7.1.2"
+pytest = "^6.2"
