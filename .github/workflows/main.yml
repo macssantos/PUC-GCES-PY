@@ -27,11 +27,11 @@ jobs:
     # - name: Run tests
     #   run: poetry run pytest
 
-    - name: Lint documentation
-      run: poetry run sphinx-build -b html docs _build/html
+    # - name: Lint documentation
+    #   run: poetry run sphinx-build -b html docs _build/html
 
-    - name: Deploy to PyPI
-      if: github.ref == 'refs/heads/main'  # ou substitua pela branch desejada
-      run: |
-        poetry build
-        poetry publish --username __token__ --password ${{ secrets.GITHUB_TOKEN }}
+    # - name: Deploy to PyPI
+    #   if: github.ref == 'refs/heads/main'  # ou substitua pela branch desejada
+    #   run: |
+    #     poetry build
+    #     poetry publish --username __token__ --password ${{ secrets.GITHUB_TOKEN }}
