@@ -10,3 +10,6 @@ Trabalho individual da disciplina de GERÊNCIA DE CONFIGURAÇÃO E EVOLUÇÃO DE
 4. Documentação automatizada
 5. Integração Contínua (Build, Test, Lint, documentacao) 
 6. Deploy Contínuo 
+
+<!-- poetry config pypi-token.pypi seu-nome-de-usuário
+poetry publish --build -->

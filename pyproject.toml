@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "nome-do-projeto"
+name = "gcs-marias"
 version = "0.1.0"
 description = "Trabalho de GCS"
 authors = ["Maria Aryene <macsantos@sga.pucminas.br>"]
