@@ -1,0 +1,24 @@
+import os
+import yaml
+
+# Crie um arquivo YAML de exemplo em 'src/yamls' para testar a função
+yaml_content = """
+feature_engineering:
+  - feature1
+  - feature2
+model:
+  algorithm: RandomForest
+  parameters:
+    n_estimators: 100
+"""
+
+yaml_path = 'src/yamls/test_config.yaml'
+
+with open(yaml_path, 'w') as yaml_file:
+    yaml_file.write(yaml_content)
+
+# Adicione aqui o código para chamar a função de teste, por exemplo:
+# result = test_get_config()
+
+# Limpeza: Remova o arquivo de teste
+os.remove(yaml_path)
