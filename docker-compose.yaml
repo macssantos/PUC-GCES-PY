@@ -1,13 +1,21 @@
-version: '3.1'
+version: '3'
 
 services:
-  mongodb:
-    image: mongo
-    container_name: meu-container-mongodb
-    ports:
-      - "27017:27017"
-    volumes:
-      - ./dados:/data/db
-    environment:
-      MONGO_INITDB_ROOT_USERNAME=lappis
-      MONGO_INITDB_ROOT_PASSWORD=lappis
+  python-app:
+    build:
+      context: .
+    # Adicione outras configurações necessárias para a aplicação Python
+    networks:
+      - backend_network
+
+  metabase:
+    build:
+      context: .
+      dockerfile: metabase/config/dockerfile_metabase
+    # Adicione outras configurações necessárias para o Metabase
+    networks:
+      - backend_network
+
+networks:
+  backend_network:
+    driver: bridge

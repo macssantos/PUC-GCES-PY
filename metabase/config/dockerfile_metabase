@@ -1,0 +1,11 @@
+# Use a imagem base do Metabase
+FROM metabase/metabase
+
+# Adicione configurações específicas, se necessário
+# COPY metabase_config_file /path/to/config/file
+
+# Defina o diretório de trabalho
+WORKDIR /src
+
+# Comando para iniciar o Metabase
+CMD ["java", "-jar", "metabase.jar"]
