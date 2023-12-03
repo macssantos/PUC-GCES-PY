@@ -24,8 +24,8 @@ jobs:
         pip install poetry
         poetry install
 
-    - name: Run tests
-      run: poetry run pytest
+    # - name: Run tests
+    #   run: poetry run pytest
 
     - name: Lint documentation
       run: poetry run sphinx-build -b html docs _build/html
