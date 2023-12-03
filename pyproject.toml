@@ -9,4 +9,8 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.dependencies]
-pytest = "<7.4.3"
+# Aqui você lista suas dependências normais, sem o pytest como uma dependência direta.
+
+[tool.poetry.dev-dependencies]
+# Aqui você adiciona o pytest como uma dependência de desenvolvedor.
+pytest = "^7.4.3"
