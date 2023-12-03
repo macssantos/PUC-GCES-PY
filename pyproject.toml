@@ -8,9 +8,4 @@ authors = ["Maria Aryene <macsantos@sga.pucminas.br>"]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry.dependencies]
-# Aqui você lista suas dependências normais, sem o pytest como uma dependência direta.
 
-[tool.poetry.dev-dependencies]
-# Aqui você adiciona o pytest como uma dependência de desenvolvedor.
-pytest = "^6.2"
