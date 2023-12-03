@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: meu-container-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./dados:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME=lappis
+      MONGO_INITDB_ROOT_PASSWORD=lappis
