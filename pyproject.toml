@@ -1,6 +1,8 @@
 [tool.poetry]
 name = "nome-do-projeto"
 version = "0.1.0"
+description = "Trabalho de GCS"
+authors = ["Maria Aryene <macsantos@sga.pucminas.br>"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
